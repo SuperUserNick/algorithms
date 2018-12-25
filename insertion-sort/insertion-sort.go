@@ -5,13 +5,15 @@ import (
 )
 
 func main() {
-	arr2 := []int{2, 3, 1, 0, -99, -2, 77, 74}
-	output := insertionsort(arr2)
+	//arr2 := []int{2, 3, 1, 0, -99, -2, 77, 74}
+	arr := []int{2, 3, 1}
+	output := insertionsort(arr)
 	fmt.Println(output)
 }
 
 //I am using logging methods to understand each step of the algorithm
 //I find it easier to visualize in my head how it is operating on the numbers
+//This is for increasing order, for decreasing order, change the boolean operator on line 22 from a[i] > key to a[i] < key...write it out - it makes sense!
 
 func insertionsort(arr []int) []int {
 	for j := 1; j < len(arr); j++ {
